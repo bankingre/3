@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 東京夢幻 7 天 6 夜行程表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F7F5F0;
+            --card-bg: #FFFFFF;
+            --text-main: #4A4543;
+            --text-sub: #8C827B;
+            --accent-pink: #E8A598;
+            --accent-green: #9AB0A0;
+            --accent-brown: #C49A6C;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 2px dashed var(--accent-pink);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--accent-brown);
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* 匯率計算器 */
+        .converter-box {
+            background: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .converter-box input {
+            width: 90px;
+            padding: 6px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-family: inherit;
+        }
+
+        /* 行程卡片 */
+        .day-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border-left: 6px solid var(--accent-green);
+        }
+
+        .day-card.highlight {
+            border-left-color: var(--accent-pink);
+        }
+
+        .day-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-brown);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .event-item {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .time {
+            font-weight: bold;
+            color: var(--accent-green);
+            min-width: 55px;
+            margin-right: 10px;
+        }
+
+        .detail {
+            flex-grow: 1;
+        }
+
+        /* 地圖按鈕 */
+        .map-btn {
+            display: inline-block;
+            background: #FFF0EE;
+            color: #D36C59;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-left: 6px;
+            font-weight: bold;
+        }
+
+        .map-btn:hover {
+            background: #FFE0DC;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🗼 2026 東京夢幻 7 天 6 夜行程</h1>
+            <p>📅 11/07 (六) - 11/13 (五) | 5人同行 | 🏨 Hotel Indigo Tokyo Shibuya</p>
+        </header>
+
+        <!-- 簡易匯率換算 -->
+        <div class="converter-box">
+            <span>💱 <strong>日圓 JPY</strong></span>
+            <input type="number" id="jpyInput" value="10000" oninput="convertCurrency()">
+            <span>➔ <strong>HKD:</strong> <span id="hkdOutput" style="color:var(--accent-brown); font-weight:bold;">520</span></span>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-card highlight">
+            <div class="day-title"><span>Day 1 (11/07 六) 抵達東京 ➔ 澀谷</span><span>✈️</span></div>
+            <div class="event-item"><span class="time">10:30</span><span class="detail">香港起飛 ➔ 15:35 成田 T2 抵達（國泰 CX 520）</span></div>
+            <div class="event-item"><span class="time">16:30</span><span class="detail">搭乘 Keisei Skyliner 轉 JR山手線直達澀谷</span></div>
+            <div class="event-item"><span class="time">17:00</span><span class="detail">入住 Hotel Indigo Tokyo Shibuya（連住6晚）<a class="map-btn" href="https://maps.google.com/?q=Hotel+Indigo+Tokyo+Shibuya" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">18:45</span><span class="detail">Shibuya Parco 逛街（Chiikawa Land）<a class="map-btn" href="https://maps.google.com/?q=Shibuya+Parco" target="_blank">📍 地圖</a>，晚餐：美登利壽司 / 極味屋 / 挽肉與米</span></div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card">
+            <div class="day-title"><span>Day 2 (11/08 日) 豪德寺 ➔ 戶越銀座 ➔ 橫濱</span><span>🐈</span></div>
+            <div class="event-item"><span class="time">09:30</span><span class="detail">參拜豪德寺（滿山招財貓）<a class="map-btn" href="https://maps.google.com/?q=Gotokuji+Temple" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">12:00</span><span class="detail">戶越銀座商店街品嚐在地美食<a class="map-btn" href="https://maps.google.com/?q=Togoshi+Ginza" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">15:00</span><span class="detail">橫濱：朝聖吉伊卡哇燒 ➔ 紅磚倉庫 <a class="map-btn" href="https://maps.google.com/?q=Yokohama+Red+Brick+Warehouse" target="_blank">📍 地圖</a> ➔ 未來港夜景 ➔ 中華街晚餐</span></div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card highlight">
+            <div class="day-title"><span>Day 3 (11/09 一) 富士山自駕遊</span><span>🚗</span></div>
+            <div class="event-item"><span class="time">07:00</span><span class="detail">澀谷取車出發</span></div>
+            <div class="event-item"><span class="time">08:30</span><span class="detail">河口湖大石公園（紅葉祭）<a class="map-btn" href="https://maps.google.com/?q=Oishi+Park" target="_blank">📍 地圖</a> ➔ 忍野八海 <a class="map-btn" href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank">📍 地圖</a>（午餐：小作餺飥麵）</span></div>
+            <div class="event-item"><span class="time">13:00</span><span class="detail">富士急樂園暢玩 4 小時絕叫過山車<a class="map-btn" href="https://maps.google.com/?q=Fuji-Q+Highland" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">17:45</span><span class="detail">御殿場 Outlet 購物 <a class="map-btn" href="https://maps.google.com/?q=Gotemba+Premium+Outlets" target="_blank">📍 地圖</a>，21:30 還車宵夜</span></div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-card">
+            <div class="day-title"><span>Day 4 (11/10 二) 川越 ➔ 新宿放題 ➔ 原宿</span><span>🥩</span></div>
+            <div class="event-item"><span class="time">08:30</span><span class="detail">乘車直通川越小江戶老街<a class="map-btn" href="https://maps.google.com/?q=Kawagoe+Koedo" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">14:00</span><span class="detail">🍱 新宿銀座八芳享用頂級和牛與松葉蟹放題！<a class="map-btn" href="https://maps.google.com/?q=Ginza+Happo+Shinjuku" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">15:15</span><span class="detail">OS Drug 藥妝爆買 ➔ 原宿竹下通、表參道、貓街 <a class="map-btn" href="https://maps.google.com/?q=Cat+Street+Harajuku" target="_blank">📍 地圖</a></span></div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-card">
+            <div class="day-title"><span>Day 5 (11/11 三) 小網神社 ➔ 木更津 ➔ 澀谷</span><span>⛩️</span></div>
+            <div class="event-item"><span class="time">07:00</span><span class="detail">小網神社早起洗錢求財運<a class="map-btn" href="https://maps.google.com/?q=Kowami+Shrine" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">08:30</span><span class="detail">搭高速巴士至木更津 Outlet 爆買 4 小時 <a class="map-btn" href="https://maps.google.com/?q=Mitsui+Outlet+Park+Kisarazu" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">14:00</span><span class="detail">東京站一番街（Chiikawa Land）<a class="map-btn" href="https://maps.google.com/?q=Tokyo+Station+Character+Street" target="_blank">📍 地圖</a> ➔ 銀座商圈</span></div>
+            <div class="event-item"><span class="time">17:00</span><span class="detail">澀谷 Street Kart 卡丁車或六本木東京鐵塔夜景</span></div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-card">
+            <div class="day-title"><span>Day 6 (11/12 四) 池袋 ➔ 上野 ➔ 淺草水上船 ➔ 神田</span><span>🚢</span></div>
+            <div class="event-item"><span class="time">09:30</span><span class="detail">池袋 Sunshine City 逛街（Chiikawa 專門店）<a class="map-btn" href="https://maps.google.com/?q=Sunshine+City+Ikebukuro" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">12:00</span><span class="detail">目黑/五反田人氣烘焙店 Les Joues de BéBé 嘆早午餐</span></div>
+            <div class="event-item"><span class="time">13:30</span><span class="detail">上野恩賜公園 Tokyo Christmas Advent 聖誕市集 <a class="map-btn" href="https://maps.google.com/?q=Ueno+Park" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">15:45</span><span class="detail">淺草雷門、龜十銅鑼燒、今戶神社招財貓 <a class="map-btn" href="https://maps.google.com/?q=Senso-ji" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">16:40</span><span class="detail">⚓ 乘搭銀河鐵路 999 水上巴士直達台場賞夜景</span></div>
+            <div class="event-item"><span class="time">19:45</span><span class="detail">晚餐：神田百年歷史建物「鳥すきやき ぼたん」炭火雞肉壽喜燒 <a class="map-btn" href="https://maps.google.com/?q=Torisukiyaki+Botan" target="_blank">📍 地圖</a></span></div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-card highlight">
+            <div class="day-title"><span>Day 7 (11/13 五) 澀谷最後衝刺 ➔ 專車返港</span><span>✈️</span></div>
+            <div class="event-item"><span class="time">10:00</span><span class="detail">Mega DonKi 最後補貨 / 執行李 <a class="map-btn" href="https://maps.google.com/?q=Mega+Don+Quijote+Shibuya" target="_blank">📍 地圖</a></span></div>
+            <div class="event-item"><span class="time">14:30</span><span class="detail">🚐 乘搭已預約私家包車由 Hotel Indigo 大堂直達成田 T2</span></div>
+            <div class="event-item"><span class="time">18:30</span><span class="detail">乘日航 JAL 735 順利返港！（右側靠窗看富士山夕陽 🌅）</span></div>
+        </div>
+
+        <footer>
+            <p>✨ Have a wonderful trip to Tokyo! ✨</p>
+        </footer>
+    </div>
+
+    <script>
+        // 簡單匯率換算邏輯 (假設 100 JPY = 5.2 HKD)
+        function convertCurrency() {
+            let jpy = document.getElementById('jpyInput').value;
+            let hkd = (jpy * 0.052).toFixed(1);
+            document.getElementById('hkdOutput').innerText = hkd;
+        }
+    </script>
+</body>
+</html>
